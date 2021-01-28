@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63AEBB0B-CC52-4C01-AA16-F494B346AFC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Prog1</RootNamespace>
+    <AssemblyName>Prog1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F0AD412FA2A6B299D0237041EC920F30A8E4627A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Prog1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllDoc.Designer.cs">
+      <DependentUpon>AllDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etik_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etik_Primer.Designer.cs">
+      <DependentUpon>Etik_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etiketka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etiketka.Designer.cs">
+      <DependentUpon>Etiketka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulyar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulyar.Designer.cs">
+      <DependentUpon>Formulyar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulyar_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulyar_Primer.Designer.cs">
+      <DependentUpon>Formulyar_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GOST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GOST.Designer.cs">
+      <DependentUpon>GOST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPX.Designer.cs">
+      <DependentUpon>IPX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPX_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPX_Primer.Designer.cs">
+      <DependentUpon>IPX_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LU.Designer.cs">
+      <DependentUpon>LU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LU_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LU_Primer.Designer.cs">
+      <DependentUpon>LU_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Spec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spec.Designer.cs">
+      <DependentUpon>Spec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spec_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spec_Primer.Designer.cs">
+      <DependentUpon>Spec_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tekst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tekst.Designer.cs">
+      <DependentUpon>Tekst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tekst_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tekst_Primer.Designer.cs">
+      <DependentUpon>Tekst_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vedomostb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vedomostb.Designer.cs">
+      <DependentUpon>Vedomostb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vedomostb_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vedomostb_Primer.Designer.cs">
+      <DependentUpon>Vedomostb_Primer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VMNZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VMNZ.Designer.cs">
+      <DependentUpon>VMNZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VMNZ_Primer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VMNZ_Primer.Designer.cs">
+      <DependentUpon>VMNZ_Primer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllDoc.resx">
+      <DependentUpon>AllDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etiketka.resx">
+      <DependentUpon>Etiketka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etik_Primer.resx">
+      <DependentUpon>Etik_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulyar.resx">
+      <DependentUpon>Formulyar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulyar_Primer.resx">
+      <DependentUpon>Formulyar_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GOST.resx">
+      <DependentUpon>GOST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPX.resx">
+      <DependentUpon>IPX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPX_Primer.resx">
+      <DependentUpon>IPX_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LU.resx">
+      <DependentUpon>LU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LU_Primer.resx">
+      <DependentUpon>LU_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spec.resx">
+      <DependentUpon>Spec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spec_Primer.resx">
+      <DependentUpon>Spec_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tekst.resx">
+      <DependentUpon>Tekst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tekst_Primer.resx">
+      <DependentUpon>Tekst_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vedomostb.resx">
+      <DependentUpon>Vedomostb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vedomostb_Primer.resx">
+      <DependentUpon>Vedomostb_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VMNZ.resx">
+      <DependentUpon>VMNZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VMNZ_Primer.resx">
+      <DependentUpon>VMNZ_Primer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Prog1_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Birka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Etiketka1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VMNZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tekst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vedomostb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\765121-amazing-technology-background-images-1920x1080-for-samsung.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ikonka.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almaz_D.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

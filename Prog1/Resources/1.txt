@@ -1,0 +1,2 @@
+            Resources.Sh08.Save(path);
+            File.WriteAllText(path, Resources.Sh08 );
