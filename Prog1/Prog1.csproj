@@ -141,7 +141,6 @@
     <Compile Include="GOST.Designer.cs">
       <DependentUpon>GOST.cs</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\ObservableListSource.cs" />
     <Compile Include="IPX.cs">
       <SubType>Form</SubType>
     </Compile>
