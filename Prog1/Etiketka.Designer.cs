@@ -1,4 +1,5 @@
-﻿namespace Prog1
+﻿
+namespace Prog1
 {
     partial class Etiketka
     {
@@ -50,6 +51,20 @@
             this.NomTomE = new System.Windows.Forms.ComboBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button3 = new System.Windows.Forms.Button();
+            this.saveToDb = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.etiketkaModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.decimalNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeSequenceNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.setupDiscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sourceDiscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etiketkaModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CivrE
@@ -252,11 +267,102 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // saveToDb
+            // 
+            this.saveToDb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveToDb.Location = new System.Drawing.Point(555, 123);
+            this.saveToDb.Name = "saveToDb";
+            this.saveToDb.Size = new System.Drawing.Size(243, 31);
+            this.saveToDb.TabIndex = 17;
+            this.saveToDb.Text = "Сохранить в БД";
+            this.saveToDb.UseVisualStyleBackColor = true;
+            this.saveToDb.Click += new System.EventHandler(this.saveToDb_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.decimalNumberDataGridViewTextBoxColumn,
+            this.programNameDataGridViewTextBoxColumn,
+            this.documentCodeDataGridViewTextBoxColumn,
+            this.createDateDataGridViewTextBoxColumn,
+            this.volumeSequenceNumberDataGridViewTextBoxColumn,
+            this.setupDiscDataGridViewTextBoxColumn,
+            this.sourceDiscDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.etiketkaModelBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 258);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(783, 281);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // etiketkaModelBindingSource
+            // 
+            this.etiketkaModelBindingSource.DataSource = typeof(Prog1.Models.EtiketkaModel);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // decimalNumberDataGridViewTextBoxColumn
+            // 
+            this.decimalNumberDataGridViewTextBoxColumn.DataPropertyName = "DecimalNumber";
+            this.decimalNumberDataGridViewTextBoxColumn.HeaderText = "DecimalNumber";
+            this.decimalNumberDataGridViewTextBoxColumn.Name = "decimalNumberDataGridViewTextBoxColumn";
+            // 
+            // programNameDataGridViewTextBoxColumn
+            // 
+            this.programNameDataGridViewTextBoxColumn.DataPropertyName = "ProgramName";
+            this.programNameDataGridViewTextBoxColumn.HeaderText = "ProgramName";
+            this.programNameDataGridViewTextBoxColumn.Name = "programNameDataGridViewTextBoxColumn";
+            // 
+            // documentCodeDataGridViewTextBoxColumn
+            // 
+            this.documentCodeDataGridViewTextBoxColumn.DataPropertyName = "DocumentCode";
+            this.documentCodeDataGridViewTextBoxColumn.HeaderText = "DocumentCode";
+            this.documentCodeDataGridViewTextBoxColumn.Name = "documentCodeDataGridViewTextBoxColumn";
+            // 
+            // createDateDataGridViewTextBoxColumn
+            // 
+            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
+            this.createDateDataGridViewTextBoxColumn.HeaderText = "CreateDate";
+            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
+            // 
+            // volumeSequenceNumberDataGridViewTextBoxColumn
+            // 
+            this.volumeSequenceNumberDataGridViewTextBoxColumn.DataPropertyName = "VolumeSequenceNumber";
+            this.volumeSequenceNumberDataGridViewTextBoxColumn.HeaderText = "VolumeSequenceNumber";
+            this.volumeSequenceNumberDataGridViewTextBoxColumn.Name = "volumeSequenceNumberDataGridViewTextBoxColumn";
+            // 
+            // setupDiscDataGridViewTextBoxColumn
+            // 
+            this.setupDiscDataGridViewTextBoxColumn.DataPropertyName = "SetupDisc";
+            this.setupDiscDataGridViewTextBoxColumn.HeaderText = "SetupDisc";
+            this.setupDiscDataGridViewTextBoxColumn.Name = "setupDiscDataGridViewTextBoxColumn";
+            // 
+            // sourceDiscDataGridViewTextBoxColumn
+            // 
+            this.sourceDiscDataGridViewTextBoxColumn.DataPropertyName = "SourceDisc";
+            this.sourceDiscDataGridViewTextBoxColumn.HeaderText = "SourceDisc";
+            this.sourceDiscDataGridViewTextBoxColumn.Name = "sourceDiscDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            // 
             // Etiketka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 252);
+            this.ClientSize = new System.Drawing.Size(811, 551);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.saveToDb);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.NomTomE);
             this.Controls.Add(this.label8);
@@ -279,6 +385,8 @@
             this.Name = "Etiketka";
             this.Text = "Этикетки";
             this.Load += new System.EventHandler(this.Etiketka_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etiketkaModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +414,17 @@
         private System.Windows.Forms.ComboBox NomTomE;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button saveToDb;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn decimalNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumeSequenceNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn setupDiscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sourceDiscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource etiketkaModelBindingSource;
     }
 }

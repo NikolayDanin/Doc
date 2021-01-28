@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.IO;
+using Prog1.Models;
+using System.Data.Entity;
 
 namespace Prog1
 {
@@ -16,9 +18,13 @@ namespace Prog1
     {
         private string TemplateFileName => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Sh07_Etik.docx");
         private string TemplateFileNameGOST => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GOST\\СТО МНЗ.docx");
+        private readonly EtiketkaContext _dbContext;
         public Etiketka()
         {
             InitializeComponent();
+            _dbContext = new EtiketkaContext();
+            _dbContext.Etiketkas.Load();
+            dataGridView1.DataSource = _dbContext.Etiketkas.Local.ToBindingList();
         }
 
         void button1_Click_1(object sender, EventArgs e)
@@ -119,6 +125,23 @@ namespace Prog1
             if (((TextBox)sender).Text.Length == 1)
                 ((TextBox)sender).Text = ((TextBox)sender).Text.ToUpper();
             ((TextBox)sender).Select(((TextBox)sender).Text.Length, 0);
+        }
+
+        private void saveToDb_Click(object sender, EventArgs e)
+        {
+            var etiketka = new EtiketkaModel
+            {
+                DecimalNumber = CivrE.Text,
+                ProgramName = NamePP.Text,
+                DocumentCode = KodE.SelectedItem == null ? KodE.Text : KodE.SelectedItem.ToString(),
+                CreateDate = new DateTimeOffset(DateE.Value),
+                VolumeSequenceNumber = NomTomE.SelectedItem == null ? NomTomE.Text : NomTomE.SelectedItem.ToString(),
+                SetupDisc = MT02.Text,
+                SourceDisc = MT03.Text,
+                Note = MT81.Text
+            };
+            _dbContext.Etiketkas.Add(etiketka);
+            _dbContext.SaveChanges();
         }
     }
 }
