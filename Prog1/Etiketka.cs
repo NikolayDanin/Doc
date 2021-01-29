@@ -18,13 +18,13 @@ namespace Prog1
     {
         private string TemplateFileName => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Sh07_Etik.docx");
         private string TemplateFileNameGOST => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GOST\\СТО МНЗ.docx");
-        private readonly EtiketkaContext _dbContext;
+        private readonly MainDbContext _dbContext;
         public Etiketka()
         {
             InitializeComponent();
-            _dbContext = new EtiketkaContext();
-            _dbContext.Etiketkas.Load();
-            dataGridView1.DataSource = _dbContext.Etiketkas.Local.ToBindingList();
+            _dbContext = new MainDbContext();
+            _dbContext.Labels.Load();
+            dataGridView1.DataSource = _dbContext.Labels.Local.ToBindingList();
         }
 
         void button1_Click_1(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace Prog1
 
         private void saveToDb_Click(object sender, EventArgs e)
         {
-            var etiketka = new EtiketkaModel
+            var etiketka = new LabelModel
             {
                 DecimalNumber = CivrE.Text,
                 ProgramName = NamePP.Text,
@@ -140,7 +140,7 @@ namespace Prog1
                 SourceDisc = MT03.Text,
                 Note = MT81.Text
             };
-            _dbContext.Etiketkas.Add(etiketka);
+            _dbContext.Labels.Add(etiketka);
             _dbContext.SaveChanges();
         }
     }
