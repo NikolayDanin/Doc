@@ -300,7 +300,7 @@ namespace Prog1
             // 
             // etiketkaModelBindingSource
             // 
-            this.etiketkaModelBindingSource.DataSource = typeof(Prog1.Models.EtiketkaModel);
+            this.etiketkaModelBindingSource.DataSource = typeof(Prog1.Models.LabelModel);
             // 
             // idDataGridViewTextBoxColumn
             // 

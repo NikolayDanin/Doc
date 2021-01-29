@@ -66,10 +66,30 @@
             this.saveFileDialogIPX = new System.Windows.Forms.SaveFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button3 = new System.Windows.Forms.Button();
+            this.ipxGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.decimalNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentUsageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.organizationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.responsiblePersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.headOfBmdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.setupDiscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sourceDiscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ipxModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveToDb = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ipxGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ipxModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -452,11 +472,165 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // ipxGridView
+            // 
+            this.ipxGridView.AllowUserToAddRows = false;
+            this.ipxGridView.AllowUserToDeleteRows = false;
+            this.ipxGridView.AutoGenerateColumns = false;
+            this.ipxGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ipxGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.decimalNumberDataGridViewTextBoxColumn,
+            this.programNameDataGridViewTextBoxColumn,
+            this.subjectDataGridViewTextBoxColumn,
+            this.documentUsageDataGridViewTextBoxColumn,
+            this.letterDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.organizationDataGridViewTextBoxColumn,
+            this.producerDataGridViewTextBoxColumn,
+            this.ownerDataGridViewTextBoxColumn,
+            this.responsiblePersonDataGridViewTextBoxColumn,
+            this.headOfBmdDataGridViewTextBoxColumn,
+            this.setupDiscDataGridViewTextBoxColumn,
+            this.sourceDiscDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn});
+            this.ipxGridView.DataSource = this.ipxModelBindingSource;
+            this.ipxGridView.Location = new System.Drawing.Point(12, 496);
+            this.ipxGridView.MultiSelect = false;
+            this.ipxGridView.Name = "ipxGridView";
+            this.ipxGridView.ReadOnly = true;
+            this.ipxGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ipxGridView.Size = new System.Drawing.Size(750, 218);
+            this.ipxGridView.TabIndex = 20;
+            this.ipxGridView.DoubleClick += new System.EventHandler(this.ipxGridView_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // decimalNumberDataGridViewTextBoxColumn
+            // 
+            this.decimalNumberDataGridViewTextBoxColumn.DataPropertyName = "DecimalNumber";
+            this.decimalNumberDataGridViewTextBoxColumn.HeaderText = "DecimalNumber";
+            this.decimalNumberDataGridViewTextBoxColumn.Name = "decimalNumberDataGridViewTextBoxColumn";
+            this.decimalNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // programNameDataGridViewTextBoxColumn
+            // 
+            this.programNameDataGridViewTextBoxColumn.DataPropertyName = "ProgramName";
+            this.programNameDataGridViewTextBoxColumn.HeaderText = "ProgramName";
+            this.programNameDataGridViewTextBoxColumn.Name = "programNameDataGridViewTextBoxColumn";
+            this.programNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // subjectDataGridViewTextBoxColumn
+            // 
+            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
+            this.subjectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // documentUsageDataGridViewTextBoxColumn
+            // 
+            this.documentUsageDataGridViewTextBoxColumn.DataPropertyName = "DocumentUsage";
+            this.documentUsageDataGridViewTextBoxColumn.HeaderText = "DocumentUsage";
+            this.documentUsageDataGridViewTextBoxColumn.Name = "documentUsageDataGridViewTextBoxColumn";
+            this.documentUsageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // letterDataGridViewTextBoxColumn
+            // 
+            this.letterDataGridViewTextBoxColumn.DataPropertyName = "Letter";
+            this.letterDataGridViewTextBoxColumn.HeaderText = "Letter";
+            this.letterDataGridViewTextBoxColumn.Name = "letterDataGridViewTextBoxColumn";
+            this.letterDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // organizationDataGridViewTextBoxColumn
+            // 
+            this.organizationDataGridViewTextBoxColumn.DataPropertyName = "Organization";
+            this.organizationDataGridViewTextBoxColumn.HeaderText = "Organization";
+            this.organizationDataGridViewTextBoxColumn.Name = "organizationDataGridViewTextBoxColumn";
+            this.organizationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // producerDataGridViewTextBoxColumn
+            // 
+            this.producerDataGridViewTextBoxColumn.DataPropertyName = "Producer";
+            this.producerDataGridViewTextBoxColumn.HeaderText = "Producer";
+            this.producerDataGridViewTextBoxColumn.Name = "producerDataGridViewTextBoxColumn";
+            this.producerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ownerDataGridViewTextBoxColumn
+            // 
+            this.ownerDataGridViewTextBoxColumn.DataPropertyName = "Owner";
+            this.ownerDataGridViewTextBoxColumn.HeaderText = "Owner";
+            this.ownerDataGridViewTextBoxColumn.Name = "ownerDataGridViewTextBoxColumn";
+            this.ownerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // responsiblePersonDataGridViewTextBoxColumn
+            // 
+            this.responsiblePersonDataGridViewTextBoxColumn.DataPropertyName = "ResponsiblePerson";
+            this.responsiblePersonDataGridViewTextBoxColumn.HeaderText = "ResponsiblePerson";
+            this.responsiblePersonDataGridViewTextBoxColumn.Name = "responsiblePersonDataGridViewTextBoxColumn";
+            this.responsiblePersonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // headOfBmdDataGridViewTextBoxColumn
+            // 
+            this.headOfBmdDataGridViewTextBoxColumn.DataPropertyName = "HeadOfBmd";
+            this.headOfBmdDataGridViewTextBoxColumn.HeaderText = "HeadOfBmd";
+            this.headOfBmdDataGridViewTextBoxColumn.Name = "headOfBmdDataGridViewTextBoxColumn";
+            this.headOfBmdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // setupDiscDataGridViewTextBoxColumn
+            // 
+            this.setupDiscDataGridViewTextBoxColumn.DataPropertyName = "SetupDisc";
+            this.setupDiscDataGridViewTextBoxColumn.HeaderText = "SetupDisc";
+            this.setupDiscDataGridViewTextBoxColumn.Name = "setupDiscDataGridViewTextBoxColumn";
+            this.setupDiscDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sourceDiscDataGridViewTextBoxColumn
+            // 
+            this.sourceDiscDataGridViewTextBoxColumn.DataPropertyName = "SourceDisc";
+            this.sourceDiscDataGridViewTextBoxColumn.HeaderText = "SourceDisc";
+            this.sourceDiscDataGridViewTextBoxColumn.Name = "sourceDiscDataGridViewTextBoxColumn";
+            this.sourceDiscDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ipxModelBindingSource
+            // 
+            this.ipxModelBindingSource.DataSource = typeof(Prog1.Models.IpxModel);
+            // 
+            // saveToDb
+            // 
+            this.saveToDb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveToDb.Location = new System.Drawing.Point(160, 445);
+            this.saveToDb.Name = "saveToDb";
+            this.saveToDb.Size = new System.Drawing.Size(171, 35);
+            this.saveToDb.TabIndex = 21;
+            this.saveToDb.Text = "Сохранить в БД";
+            this.saveToDb.UseVisualStyleBackColor = true;
+            this.saveToDb.Click += new System.EventHandler(this.saveToDb_Click);
+            // 
             // IPX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 490);
+            this.ClientSize = new System.Drawing.Size(773, 726);
+            this.Controls.Add(this.saveToDb);
+            this.Controls.Add(this.ipxGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -475,6 +649,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ipxGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ipxModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,5 +693,23 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox LiteraI;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView ipxGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn decimalNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentUsageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn letterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn organizationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn responsiblePersonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn headOfBmdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn setupDiscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sourceDiscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ipxModelBindingSource;
+        private System.Windows.Forms.Button saveToDb;
     }
 }

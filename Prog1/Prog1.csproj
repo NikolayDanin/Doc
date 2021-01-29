@@ -165,8 +165,14 @@
     <Compile Include="LU_Primer.Designer.cs">
       <DependentUpon>LU_Primer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\EtiketkaContext.cs" />
-    <Compile Include="Models\EtiketkaModel.cs" />
+    <Compile Include="Migrations\202101291043301_IpxModelSave.cs" />
+    <Compile Include="Migrations\202101291043301_IpxModelSave.designer.cs">
+      <DependentUpon>202101291043301_IpxModelSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\MainDbContext.cs" />
+    <Compile Include="Models\LabelModel.cs" />
+    <Compile Include="Models\IpxModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -261,6 +267,9 @@
     <EmbeddedResource Include="LU_Primer.resx">
       <DependentUpon>LU_Primer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101291043301_IpxModelSave.resx">
+      <DependentUpon>202101291043301_IpxModelSave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -295,7 +304,6 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Prog1_TemporaryKey.pfx" />
-    <None Include="Properties\DataSources\Prog1.Models.EtiketkaModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -383,6 +391,7 @@
   <ItemGroup>
     <None Include="Resources\Almaz_D.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

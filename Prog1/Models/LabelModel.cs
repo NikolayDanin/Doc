@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Prog1.Models
 {
-    public class EtiketkaModel
+    [Table("Labels")]
+    public class LabelModel
     {
         public int Id { get; set; }
         public string DecimalNumber { get; set; }

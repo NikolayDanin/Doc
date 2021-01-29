@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.IO;
+using Prog1.Models;
+using System.Data.Entity;
 
 namespace Prog1
 {
@@ -16,9 +18,14 @@ namespace Prog1
     {
         private string TemplateFileName => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Sh05_IPH.docx");
         private string TemplateFileNameGOST => System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GOST\\СТО МНЗ.docx");
+        private readonly MainDbContext _mainDbContext;
+        private IpxModel _currentModel;
         public IPX()
         {
             InitializeComponent();
+            _mainDbContext = new MainDbContext();
+            _mainDbContext.Ipxes.Load();
+            ipxGridView.DataSource = _mainDbContext.Ipxes.Local.ToBindingList();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -122,6 +129,50 @@ namespace Prog1
             if (((TextBox)sender).Text.Length == 1)
                 ((TextBox)sender).Text = ((TextBox)sender).Text.ToUpper();
             ((TextBox)sender).Select(((TextBox)sender).Text.Length, 0);
+        }
+
+        private void saveToDb_Click(object sender, EventArgs e)
+        {
+            var ipx = new IpxModel
+            {
+                DecimalNumber = Civr02I.Text,
+                ProgramName = NamePPI.Text,
+                Subject = TemaI.Text,
+                DocumentUsage = UseDocI.Text,
+                Letter = LiteraI.Text,
+                Author = AvtorI.Text,
+                Organization = OrRazrabI.Text,
+                Producer = IzgotI.Text,
+                Owner = VladelecI.Text,
+                ResponsiblePerson = OtvIspolnI.Text,
+                HeadOfBmd = NachBMDI.Text,
+                SetupDisc = MT02I.Text,
+                SourceDisc = MT03I.Text,
+                Note = MT81I.Text
+            };
+            _mainDbContext.Ipxes.Add(ipx);
+            _mainDbContext.SaveChanges();
+        }
+
+        private void ipxGridView_DoubleClick(object sender, EventArgs e)
+        {
+            _currentModel = (ipxGridView.SelectedRows[0].DataBoundItem as IpxModel);
+            if (_currentModel == null)
+                return;
+            Civr02I.Text = _currentModel.DecimalNumber;
+            NamePPI.Text = _currentModel.ProgramName;
+            TemaI.Text = _currentModel.Subject;
+            UseDocI.Text = _currentModel.DocumentUsage;
+            LiteraI.Text = _currentModel.Letter;
+            AvtorI.Text = _currentModel.Author;
+            OrRazrabI.Text = _currentModel.Organization;
+            IzgotI.Text = _currentModel.Producer;
+            VladelecI.Text = _currentModel.Owner;
+            OtvIspolnI.Text = _currentModel.ResponsiblePerson;
+            NachBMDI.Text = _currentModel.HeadOfBmd;
+            MT02I.Text = _currentModel.SetupDisc;
+            MT03I.Text = _currentModel.SourceDisc;
+            MT81I.Text = _currentModel.Note;
         }
     }
 }
